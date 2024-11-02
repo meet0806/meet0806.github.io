@@ -3,7 +3,8 @@ Data Science graduate student at Stony Brook University with professional experi
 
 ## 📞 Contact
 - 📧 Email: zalavadiyameet0806@gmail.com
-- 📍 Location: Stony Brook, New York, USA
+- 📍 Location: Stony Brook, New York, US
+-  💼 LinkedIn: [Meet Zalavadiya](https://www.linkedin.com/in/meet-zalavadiya)
 
 ## 🎓 Education
 
