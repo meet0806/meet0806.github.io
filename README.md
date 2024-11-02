@@ -16,3 +16,7 @@ Data Science graduate student at Stony Brook University with professional experi
 **Sinhgad College of Engineering, Pune** | *Aug 2018 - May 2022*
 - GPA: 8.85/10
 - Relevant Coursework: Data Structures and Algorithm, Object Oriented Programming, Database Management System, Operating System, Computer Network, Cloud Computing
+
+## 💼 Professional Experience
+### Application Development Associate
+**Accenture, Pune, Maharashtra, India** | *Aug 2022 - Aug 2024*
