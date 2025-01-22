@@ -19,3 +19,12 @@ Data Science graduate student at Stony Brook University with professional experi
 ## 💼 Professional Experience
 ### Application Development Associate
 **Accenture, Pune, Maharashtra, India** | *Aug 2022 - Aug 2024*
+- Engineered KPI dashboards for real-time task monitoring, enhancing decision-making processes. Utilised JavaScript
+for robust integration and scripting solutions.
+- Thrived in Agile environment, actively participating in daily stand-ups and sprint planning. Ensured timely
+delivery of high-quality software through effective teamwork.
+- Conducted meticulous testing and debugging to guarantee application reliability. Maintained comprehensive
+technical documentation for seamless knowledge transfer.
+- Leveraged integration skills to implement cutting-edge solutions, driving significant improvements in task man-
+agement efficiency and overall productivity.
+- Spearheaded AI integration for email management, boosting productivity and streamlining workflows.
