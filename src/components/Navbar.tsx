@@ -1,6 +1,12 @@
 import { useState } from 'react'
+import { profile } from '../data/portfolio'
 
-const NAV_LINKS = ['Labs', 'Studio', 'Openings', 'Shop']
+const NAV_LINKS = [
+  { label: 'Work', href: '#work' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'GitHub', href: '#github' },
+]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -9,12 +15,12 @@ export default function Navbar() {
     <>
       <nav className="fixed top-0 left-0 z-10 flex w-full items-center justify-between px-5 py-4 sm:px-8 sm:py-5">
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <a href="#top" className="flex items-center gap-3">
           <span
             className="text-[21px] tracking-tight text-black sm:text-[26px]"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Mainframe&reg;
+            {profile.name}
           </span>
           <span
             className="select-none text-[25px] text-black sm:text-[30px]"
@@ -22,17 +28,14 @@ export default function Navbar() {
           >
             &#10035;&#xFE0E;
           </span>
-        </div>
+        </a>
 
         {/* Desktop nav links */}
         <div className="hidden text-[23px] text-black md:flex">
           {NAV_LINKS.map((link, i) => (
-            <span key={link}>
-              <a
-                href="#"
-                className="transition-opacity hover:opacity-60"
-              >
-                {link}
+            <span key={link.label}>
+              <a href={link.href} className="transition-opacity hover:opacity-60">
+                {link.label}
               </a>
               {i < NAV_LINKS.length - 1 && <span>, </span>}
             </span>
@@ -41,7 +44,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <a
-          href="#"
+          href="#contact"
           className="hidden text-[23px] text-black underline underline-offset-2 transition-opacity hover:opacity-60 md:inline"
         >
           Get in touch
@@ -82,16 +85,16 @@ export default function Navbar() {
       >
         {NAV_LINKS.map((link) => (
           <a
-            key={link}
-            href="#"
+            key={link.label}
+            href={link.href}
             className="text-[32px] font-medium text-black"
             onClick={() => setOpen(false)}
           >
-            {link}
+            {link.label}
           </a>
         ))}
         <a
-          href="#"
+          href="#contact"
           className="text-[32px] font-medium text-black underline underline-offset-2"
           onClick={() => setOpen(false)}
         >

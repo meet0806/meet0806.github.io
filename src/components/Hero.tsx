@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useTypewriter } from '../hooks/useTypewriter'
+import { profile } from '../data/portfolio'
 
 const TYPEWRITER_TEXT =
-  'Glad you stopped in. Good taste tends to find us. Now, what are we building?'
+  'Glad you stopped by. I build scalable backends, distributed systems, and AI infrastructure. Let me show you around.'
 
-const PILL_LABELS = [
-  'Pitch us an idea',
-  'Come work here',
-  'Send a brief hello',
-  'See how we operate',
+const PILLS = [
+  { label: 'See my work', href: '#work' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'GitHub', href: profile.githubUrl, external: true },
+  { label: 'LinkedIn', href: profile.linkedinUrl, external: true },
 ]
-
-const EMAIL = 'hello@mainframe.co'
 
 function CopyIcon() {
   return (
@@ -33,6 +32,7 @@ function CopyIcon() {
 export default function Hero() {
   const { displayed, done } = useTypewriter(TYPEWRITER_TEXT)
   const [pillsVisible, setPillsVisible] = useState(false)
+  const [copied, setCopied] = useState(false)
 
   // Pills fade/slide in 400ms after load, independent of the typewriter.
   useEffect(() => {
@@ -41,12 +41,17 @@ export default function Hero() {
   }, [])
 
   const handleCopy = () => {
-    navigator.clipboard?.writeText(EMAIL)
+    navigator.clipboard?.writeText(profile.email)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 1500)
   }
 
   return (
-    <section className="relative z-[1] flex h-screen flex-col justify-end overflow-hidden px-5 pb-12 sm:px-8 md:justify-center md:px-10 md:pb-0">
-      <div className="relative z-10 max-w-xl">
+    <section
+      id="top"
+      className="relative z-[1] flex h-screen flex-col justify-end overflow-hidden px-5 pb-12 sm:px-8 md:justify-center md:px-10 md:pb-0"
+    >
+      <div className="relative z-10 max-w-2xl">
         {/* Blurred intro label */}
         <div
           className="pointer-events-none mb-5 select-none sm:mb-6"
@@ -58,9 +63,9 @@ export default function Hero() {
             filter: 'blur(4px)',
           }}
         >
-          Hey there, meet A.R.I.A,
+          Hi, I'm {profile.name}.
           <br />
-          Mainframe's Adaptive Response Interface Agent
+          {profile.role} · M.S. Data Science @ Stony Brook
         </div>
 
         {/* Typewriter text */}
@@ -91,14 +96,16 @@ export default function Hero() {
             transition: 'opacity 0.4s ease, transform 0.4s ease',
           }}
         >
-          {PILL_LABELS.map((label) => (
-            <button
-              key={label}
-              type="button"
+          {PILLS.map((pill) => (
+            <a
+              key={pill.label}
+              href={pill.href}
+              target={pill.external ? '_blank' : undefined}
+              rel={pill.external ? 'noreferrer' : undefined}
               className="mx-[0.2em] mb-[0.4em] inline-flex items-center justify-center whitespace-nowrap rounded-full border border-black/10 bg-white px-4 py-[0.3em] text-[13px] text-black transition-colors duration-200 hover:bg-black hover:text-white sm:px-5 sm:text-[15px]"
             >
-              {label}
-            </button>
+              {pill.label}
+            </a>
           ))}
 
           <button
@@ -107,8 +114,8 @@ export default function Hero() {
             className="mx-[0.2em] mb-[0.4em] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white bg-transparent px-4 py-[0.3em] text-[13px] text-white transition-colors duration-200 hover:bg-white hover:text-black sm:gap-3 sm:px-5 sm:text-[15px]"
           >
             <span>
-              Reach us:{' '}
-              <span className="underline underline-offset-1">{EMAIL}</span>
+              {copied ? 'Copied!' : 'Reach me:'}{' '}
+              <span className="underline underline-offset-1">{profile.email}</span>
             </span>
             <CopyIcon />
           </button>
