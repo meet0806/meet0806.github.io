@@ -150,6 +150,23 @@ export const projects: Project[] = [
       { label: 'PR #3102', href: 'https://github.com/GraphiteEditor/Graphite/pull/3102' },
     ],
   },
+  {
+    title: 'Explainable ML Pipelines with Agentic AI',
+    blurb:
+      'A modular agentic ML pipeline where autonomous agents run end-to-end workflows with explainability built in, for Healthcare and Finance.',
+    points: [
+      'Five specialized agents (EDA, Feature Engineering, Model Tuning, Evaluator, Judge) coordinated by an orchestrator via JSON messaging.',
+      'Full SHAP and LIME integration for interpretability, plus fairness checks and an iterative retrain loop driven by a Judge agent.',
+      'Interactive Streamlit UI for uploading data, configuring runs, and exploring explainability results.',
+    ],
+    tech: ['Python', 'scikit-learn', 'XGBoost', 'SHAP', 'LIME', 'Streamlit'],
+    links: [
+      {
+        label: 'GitHub',
+        href: 'https://github.com/meet0806/explainable_ml_pipeline',
+      },
+    ],
+  },
 ]
 
 export const skills: { group: string; items: string[] }[] = [
