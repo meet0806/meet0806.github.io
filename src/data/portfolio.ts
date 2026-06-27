@@ -117,18 +117,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: 'LLM Inference Optimization Platform',
-    blurb:
-      'A high-performance LLM inference benchmarking framework to evaluate and optimize serving across model families.',
-    points: [
-      'Benchmarked Llama-3, Mistral-7B, and Phi-3 with vLLM + Hugging Face, processing 100K+ inference requests across serving configs.',
-      'Implemented dynamic batching, KV-cache optimization, FP16, and 4-bit quantization — 2.8x throughput, 55% less GPU memory.',
-      'Used PyTorch Profiler, NVIDIA Nsight, and CUDA tracing to cut end-to-end inference latency by 38%.',
-    ],
-    tech: ['Python', 'PyTorch', 'Transformers', 'CUDA', 'vLLM'],
-    links: [],
-  },
-  {
     title: 'Graphite — Vector Graphics Editor',
     blurb:
       'Open-source contributions to a Rust + WebAssembly vector graphics editor and related LLM infrastructure.',

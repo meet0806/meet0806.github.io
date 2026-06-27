@@ -41,26 +41,6 @@ export default function GitHubStats() {
           />
         </div>
 
-        {/* Stats cards */}
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-black/10 p-2">
-            <img
-              src={`https://github-readme-stats.vercel.app/api?username=${user}&show_icons=true&hide_border=true&hide_title=false&count_private=true`}
-              alt={`${user} GitHub stats`}
-              loading="lazy"
-              className="w-full"
-            />
-          </div>
-          <div className="rounded-2xl border border-black/10 p-2">
-            <img
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${user}&layout=compact&hide_border=true&langs_count=8`}
-              alt={`${user} top languages`}
-              loading="lazy"
-              className="w-full"
-            />
-          </div>
-        </div>
-
         <div className="mt-6 rounded-2xl border border-black/10 p-2">
           <img
             src={`https://github-readme-streak-stats.herokuapp.com/?user=${user}&hide_border=true`}
