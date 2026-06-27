@@ -60,7 +60,7 @@ export default function Hero() {
             lineHeight: 1.3,
             fontWeight: 400,
             color: '#000',
-            filter: 'blur(4px)',
+            filter: 'blur(1px)',
           }}
         >
           Hi, I'm {profile.name}.
