@@ -117,17 +117,19 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: 'Graphite — Vector Graphics Editor',
+    title: 'Graphite — Open-Source Contributions',
     blurb:
-      'Open-source contributions to a Rust + WebAssembly vector graphics editor and related LLM infrastructure.',
+      'Merged contributions to Graphite (26k+ stars), an open-source vector graphics editor built in Rust + WebAssembly.',
     points: [
-      'Contributed bug fixes, documentation, and feature enhancements to open-source AI and systems projects including vLLM.',
-      'Collaborated via pull requests, issue discussions, code reviews, and CI workflows following community guidelines.',
-      'Built familiarity with large production codebases, distributed systems, and open-source engineering practices.',
+      'Fixed artboard labels not reappearing after closing the node graph and returning to the viewport (PR #3061).',
+      'Added quick-measurement support to the Artboard tool for distances between artboard edges (PR #3102).',
+      'Both PRs merged into master after maintainer review in a large production Rust/WASM codebase.',
     ],
     tech: ['Rust', 'WebAssembly', 'Open Source'],
     links: [
-      { label: 'GitHub', href: 'https://github.com/GraphiteEditor/Graphite' },
+      { label: 'Repo', href: 'https://github.com/GraphiteEditor/Graphite' },
+      { label: 'PR #3061', href: 'https://github.com/GraphiteEditor/Graphite/pull/3061' },
+      { label: 'PR #3102', href: 'https://github.com/GraphiteEditor/Graphite/pull/3102' },
     ],
   },
 ]
