@@ -117,6 +117,24 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'LeetElp — Algorithm Thinking Assistant',
+    blurb:
+      'A published Chrome extension that breaks down LeetCode problems into algorithms, pseudocode, and progressive hints — without giving away the code.',
+    points: [
+      'Generates step-by-step algorithms, progressive hints, and pseudocode to build problem-solving intuition.',
+      'Provides logic-to-code guidance by parsing the problem on the page, never revealing full solutions.',
+      'Published on the Chrome Web Store (v2.0.0).',
+    ],
+    tech: ['TypeScript', 'Chrome Extension', 'LLMs'],
+    links: [
+      {
+        label: 'Chrome Web Store',
+        href: 'https://chromewebstore.google.com/detail/leetelp-%E2%80%94-algorithm-think/miljpgjljlmmnffaccfelddefebhlplf',
+      },
+    ],
+    live: true,
+  },
+  {
     title: 'Graphite — Open-Source Contributions',
     blurb:
       'Merged contributions to Graphite (26k+ stars), an open-source vector graphics editor built in Rust + WebAssembly.',

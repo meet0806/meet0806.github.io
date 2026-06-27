@@ -31,8 +31,14 @@ function ProjectCard({ project }: { project: Project }) {
           {project.title}
         </h3>
         {project.live && (
-          <span className="flex flex-shrink-0 items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs uppercase tracking-wider">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
+          <span
+            className={`flex flex-shrink-0 items-center gap-2 rounded-full px-3 py-1 text-xs uppercase tracking-wider ${
+              project.featured
+                ? 'bg-white/15 text-white'
+                : 'border border-black/15 text-black/60'
+            }`}
+          >
+            <span className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
             Live
           </span>
         )}
