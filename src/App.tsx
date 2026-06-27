@@ -21,8 +21,8 @@ export default function App() {
         <div className="relative z-[1] bg-white">
           <Projects />
           <Experience />
-          <GitHubStats />
           <Skills />
+          <GitHubStats />
           <About />
           <Contact />
         </div>
