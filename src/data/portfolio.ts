@@ -100,6 +100,23 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'Collab Canvas — Real-Time Multiplayer Whiteboard',
+    blurb:
+      'A production-oriented multiplayer whiteboard with conflict-free shared state, live cursors, and Rust/WASM rendering.',
+    points: [
+      'Conflict-free shared canvas via Yjs CRDTs with a y-websocket sync service and live multi-user cursor presence.',
+      'Rendering isolated in a Web Worker with Rust/WebAssembly rasterization for pressure-aware strokes and bounding boxes.',
+      'Per-user undo/redo, pan/zoom, and a room/session API designed to swap in-memory state for PostgreSQL/Redis.',
+    ],
+    tech: ['React', 'TypeScript', 'Rust', 'WebAssembly', 'Yjs', 'WebSockets'],
+    links: [
+      { label: 'Live site', href: 'https://collab-canvas-0w69.onrender.com/' },
+      { label: 'GitHub', href: 'https://github.com/meet0806/collab-canvas' },
+    ],
+    live: true,
+    featured: true,
+  },
+  {
     title: 'LLM Inference Optimization Platform',
     blurb:
       'A high-performance LLM inference benchmarking framework to evaluate and optimize serving across model families.',
