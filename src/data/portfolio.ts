@@ -169,44 +169,88 @@ export const projects: Project[] = [
   },
 ]
 
-export const skills: { group: string; items: string[] }[] = [
+// AWS pulled its brand marks from Simple Icons, so use the Devicon AWS logo.
+const AWS_ICON =
+  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'
+
+export interface Skill {
+  name: string
+  // Simple Icons slug (https://cdn.simpleicons.org/<slug>). Omit for
+  // conceptual skills that have no brand logo.
+  slug?: string
+  // Full icon URL; takes precedence over `slug` when both are set.
+  icon?: string
+}
+
+export const skills: { group: string; items: Skill[] }[] = [
   {
     group: 'Languages',
-    items: ['Python', 'C++', 'Java', 'TypeScript', 'JavaScript', 'Go', 'Rust', 'SQL'],
+    items: [
+      { name: 'Python', slug: 'python' },
+      { name: 'C++', slug: 'cplusplus' },
+      { name: 'Java', slug: 'openjdk' },
+      { name: 'TypeScript', slug: 'typescript' },
+      { name: 'JavaScript', slug: 'javascript' },
+      { name: 'Go', slug: 'go' },
+      { name: 'Rust', slug: 'rust' },
+      { name: 'SQL' },
+    ],
   },
   {
     group: 'AI / ML',
     items: [
-      'PyTorch',
-      'Hugging Face',
-      'Transformers',
-      'LLM Integration',
-      'RAG',
-      'Prompt Engineering',
-      'Model Evaluation',
+      { name: 'PyTorch', slug: 'pytorch' },
+      { name: 'Hugging Face', slug: 'huggingface' },
+      { name: 'Transformers', slug: 'huggingface' },
+      { name: 'LLM Integration' },
+      { name: 'RAG' },
+      { name: 'Prompt Engineering' },
+      { name: 'Model Evaluation' },
     ],
   },
   {
     group: 'Distributed Systems',
     items: [
-      'Kafka',
-      'Event-Driven Systems',
-      'Concurrency',
-      'Fault Tolerance',
-      'Scalability',
-      'Long-Running Workflows',
+      { name: 'Kafka', slug: 'apachekafka' },
+      { name: 'Event-Driven Systems' },
+      { name: 'Concurrency' },
+      { name: 'Fault Tolerance' },
+      { name: 'Scalability' },
+      { name: 'Long-Running Workflows' },
     ],
   },
   {
     group: 'Cloud & Infrastructure',
-    items: ['AWS Lambda', 'AWS EKS', 'DynamoDB', 'GCP', 'Docker', 'Kubernetes', 'Linux'],
+    items: [
+      { name: 'AWS Lambda', icon: AWS_ICON },
+      { name: 'AWS EKS', icon: AWS_ICON },
+      { name: 'DynamoDB', icon: AWS_ICON },
+      { name: 'GCP', slug: 'googlecloud' },
+      { name: 'Docker', slug: 'docker' },
+      { name: 'Kubernetes', slug: 'kubernetes' },
+      { name: 'Linux', slug: 'linux' },
+    ],
   },
   {
     group: 'Databases',
-    items: ['PostgreSQL', 'MySQL', 'DynamoDB', 'Redis', 'MongoDB', 'Elasticsearch'],
+    items: [
+      { name: 'PostgreSQL', slug: 'postgresql' },
+      { name: 'MySQL', slug: 'mysql' },
+      { name: 'DynamoDB', icon: AWS_ICON },
+      { name: 'Redis', slug: 'redis' },
+      { name: 'MongoDB', slug: 'mongodb' },
+      { name: 'Elasticsearch', slug: 'elasticsearch' },
+    ],
   },
   {
     group: 'Developer Tools',
-    items: ['Git', 'GitHub Actions', 'GitLab CI/CD', 'Cursor', 'Claude', 'GitHub Copilot'],
+    items: [
+      { name: 'Git', slug: 'git' },
+      { name: 'GitHub Actions', slug: 'githubactions' },
+      { name: 'GitLab CI/CD', slug: 'gitlab' },
+      { name: 'Cursor', slug: 'cursor' },
+      { name: 'Claude', slug: 'claude' },
+      { name: 'GitHub Copilot', slug: 'githubcopilot' },
+    ],
   },
 ]

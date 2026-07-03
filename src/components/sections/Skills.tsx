@@ -21,14 +21,33 @@ export default function Skills() {
                 {group.group}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-black/15 px-3 py-1 text-sm text-black/70 transition-colors duration-200 hover:border-black hover:text-black"
-                  >
-                    {item}
-                  </span>
-                ))}
+                {group.items.map((item) => {
+                  const src =
+                    item.icon ??
+                    (item.slug
+                      ? `https://cdn.simpleicons.org/${item.slug}`
+                      : undefined)
+                  return (
+                    <span
+                      key={item.name}
+                      className="inline-flex items-center gap-2 rounded-full border border-black/15 px-3 py-1 text-sm text-black/70 transition-colors duration-200 hover:border-black hover:text-black"
+                    >
+                      {src && (
+                        <img
+                          src={src}
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                          className="h-[15px] w-auto max-w-[24px] shrink-0"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none'
+                          }}
+                        />
+                      )}
+                      {item.name}
+                    </span>
+                  )
+                })}
               </div>
             </div>
           ))}
